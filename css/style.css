@@ -1,0 +1,55 @@
+*{
+margin: 0%;
+padding: 0%;
+
+}
+
+.logo{
+
+width: 300px;
+
+}
+
+.categoria{
+padding-top: 450px;
+display:flex ;
+align-items: center;
+justify-content: space-between; /*distribui espaços de forma igual*/
+
+}
+
+.menu-principal ul{ /*remove marcação*/
+list-style: none;
+
+
+}
+
+.menu-principal ul li{ /* coloca todos os li na mesma linha */
+display: inline-block;
+}
+
+.menu-principal ul li a{
+color:rgb(255, 0, 0);
+text-decoration: none; /* tira a linha do link*/
+text-transform: uppercase; /* deixa toda a letra em Maisculo*/
+padding: 5px 20px;
+border: 1px solid transparent;
+transition: 0,06 ease;
+font-size: 20px;
+border-radius: 50px;
+}
+
+.menu-principal ul li a:hover{ /* transição para quando para o mouse encima */
+background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
+transition: 0.60s ease; /*pause de exibição*/
+padding: 10px 35px;
+}
+
+#pagina-home{
+height: 800px ;
+background: linear-gradient(rgba(187, 181, 181, 0.329), rgb(87, 83, 83)), url(../img/banner.jpg);
+background-size:cover;
+background-position: center;
+
+}
