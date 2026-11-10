@@ -32,10 +32,10 @@ display: inline-block;
 color:rgb(255, 0, 0);
 text-decoration: none; /* tira a linha do link*/
 text-transform: uppercase; /* deixa toda a letra em Maisculo*/
-padding: 5px 20px;
-border: 1px solid transparent;
-transition: 0,3 ease;
-font-size: 20px;
+padding: 10px 25px;
+border-radius: 1px solid transparent;
+transition: 0.4 ease;
+font-size: 18px;
 border-radius: 50px;
 }
 
@@ -48,9 +48,10 @@ padding: 10px 35px;
 
 #pagina-home{
 height: 550px ;
-background: linear-gradient(rgba(187, 181, 181, 0.329), rgb(87, 83, 83)), url(../img/banner.jpg);
+background: linear-gradient(rgba(187, 181, 181, 0.329), rgb(87, 83, 83)),  url(../img/banner.jpg);
+background-repeat: no-repeat, no-repeat;
 background-size:cover;
-background-position: center;
+background-position: left center,right center;
 position: relative;
 }
 .categoria-2{
@@ -76,13 +77,94 @@ overflow:hidden;
 border-radius: 12px;
  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-.banner-text{
-position: absolute;
-top: 40%;
-left: 50%;
-color: rgb(250, 250, 250);
-z-index: 3;
-width: 90%;
-transform: translate(-50%, -50%);
-text-align: center;
+
+.categoria-4{
+position: relative;
+width: 100%;
+max-width: 800px;
+margin:  auto;
+padding-bottom: 56.25%;
+height: auto;
+overflow:hidden;
+border-radius: 12px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+
+
+
+}
+.body{
+  background: linear-gradient(rgba(235, 103, 103, 0.85), rgba(224, 210, 210, 0.95)), url("../img/fundo/2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #f74646ce;    
+}/* 1. SEGUNDA IMAGEM (Fundo geral da parte inferior) */
+body {
+    background: linear-gradient(rgba(17, 17, 17, 0.85), rgba(17, 17, 17, 0.95)), url("../img/fundo/2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+}
+
+/* 2. PRIMEIRA IMAGEM (Banner do Topo) */
+#pagina-home {
+    height: 550px;
+    background: linear-gradient(rgba(187, 181, 181, 0.329), rgb(87, 83, 83)), url("../img/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Ajuste para organizar os 3 cards lado a lado automaticamente */
+.filmes-grid {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.filme-card {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+.filme-card img {
+    width: 100%;
+    border-radius: 6px;
+}
+/* Isso força os elementos filhos a ficarem na mesma linha horizontal */
+.filmes-grid {
+    display: flex;         /* Ativa o comportamento de linha */
+    flex-wrap: wrap;       /* Se a tela for pequena (celular), joga os filmes para baixo para não amassar */
+    gap: 20px;             /* Cria um espaço uniforme de 20px entre cada pôster */
+    margin-top: 15px;
+}
+
+/* Define a caixinha de cada filme individual */
+.filme-card {
+    background-color: #222; /* Fundo escuro atrás do texto do card */
+    border-radius: 8px;
+    overflow: hidden;
+    width: 200px;           /* Controla a largura padrão dos seus pôsteres */
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Faz o efeito de zoom suave ao passar o mouse por cima do filme */
+.filme-card:hover {
+    transform: scale(1.05);
+}
+
+/* Faz as imagens preencherem o card perfeitamente sem distorcer */
+.filme-card img {
+    width: 100%;
+    height: 300px;         /* Mantém uma altura padrão elegante de pôster */
+    object-fit: cover;     /* Corta e ajusta as imagens sem achatá-las */
+}
+
+/* Centraliza o texto do título do filme abaixo da imagem */
+.card-info {
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
 }
